@@ -64,6 +64,8 @@ The challenge was to create an AI system that can automatically plan and execute
 - **Report Downloads**: Auto-generated PDF summaries based on region and use case
 - **Language Selector**: Supports 15+ Indian languages for accessibility
 
+Made by @sneharc16, @shivya0410 and @dhruv-developer
+
 ---
 
 ## Getting Started (Frontend)
