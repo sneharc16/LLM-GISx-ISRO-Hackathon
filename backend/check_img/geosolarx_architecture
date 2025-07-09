@@ -1,0 +1,40 @@
+// GeoSolarX System Architecture
+digraph {
+	fontsize=12 rankdir=LR
+	subgraph cluster_data {
+		color=lightgrey fillcolor=white label="Data Stores" style="rounded,filled"
+		STAC [label="Satellite images
+(STAC APIs)" fillcolor=lightblue style=filled]
+		GIS [label="GIS layers
+(local database)" fillcolor=lightblue style=filled]
+		BYO [label="Bring your own data
+(Satellite image)" fillcolor=lightblue style=filled]
+	}
+	subgraph cluster_reasoning {
+		color=lightgrey fillcolor=white label="Chain of thought reasoning model" style="rounded,filled"
+		Reader [label="Data reader" fillcolor=lavender style=filled]
+		GeoLibs [label="Geoprocessing
+Libraries" fillcolor=lavender style=filled]
+		RenderAPI [label="Mapping rendering APIs" fillcolor=lavender style=filled]
+	}
+	subgraph cluster_ui {
+		color=lightgrey fillcolor=white label="Interactive visualization interface" style="rounded,filled"
+		Map [label="Map rendering" fillcolor=lightblue style=filled]
+		Chat [label="Chat window" fillcolor=lightblue style=filled]
+		"Graph" [label="Graph plotting
+(Optional)" fillcolor=lightblue style=filled]
+	}
+	Docs [label="Knowledgebase from API documentation of
+geoprocessing APIs such as PyQGIS/GDAL or equivalent" fillcolor=lightgrey shape=box style="rounded,filled"]
+	STAC -> Reader
+	GIS -> Reader
+	BYO -> Reader
+	Docs -> Reader
+	Docs -> GeoLibs
+	Docs -> RenderAPI
+	Reader -> GeoLibs
+	GeoLibs -> RenderAPI
+	RenderAPI -> Map
+	RenderAPI -> Chat
+	RenderAPI -> "Graph"
+}
