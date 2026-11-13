@@ -76,7 +76,7 @@ The objective was to **build an LLM-powered system capable of:**
 - **Report Generator**: PDF exports with coordinates, cost, and impact
 - **Accessibility-First Design**: Support for rural and low-literacy users
 
-> Developed by [@sneharc16](https://github.com/sneharc16), [@shivya0410](https://github.com/shivya0410), and [@dhruv-developer](https://github.com/dhruv-developer)
+> Developed by [@sneharc16](https://github.com/sneharc16)
 
 ---
 
